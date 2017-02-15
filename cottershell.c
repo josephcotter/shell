@@ -1,6 +1,3 @@
-//JOEY COTTER LAB 1 PART 1 SHELL 
-//My shell is almost exactly like the one taught in class. It first prompts the user for a command. If the command is "exit", the shell program exits. Otherwise, the shell forks and waits while the child attempts to execv the command. If this fails, the child exits and the shell prompts the user again. Otherwise the shell waits for the child to die, then prompts the user again. 
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -26,7 +23,7 @@ void main()
 			
 		getline(&cmdstr, &bufsize, stdin); // reading command 
 	
-		cmdstr[strlen(cmdstr)-1] = 0; // removing newline character at the end of command, didn't work otherwise 
+		cmdstr[strlen(cmdstr)-1] = 0; // removing newline character at the end of command, doesn't work otherwise 
 	
 		if (strcmp(cmdstr, "exit") == 0) // if command is exit, exit
 			exit(0);
@@ -39,7 +36,7 @@ void main()
 		else
 		{
 			execve(cmdstr, NULL, 0); // attempting to run command program
-	    		printf("launch failed\n"); // if this code runs, it means execve failed. exit child process
+	    		printf("launch failed\n"); // if this code runs, it means execve failed. child process exits
 			exit(0); 
 		}
 
