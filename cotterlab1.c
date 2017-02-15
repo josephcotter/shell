@@ -26,12 +26,12 @@ void main()
 			
 		getline(&cmdstr, &bufsize, stdin); // reading command 
 	
-		cmdstr[strlen(cmdstr)-1] = 0; // removing newline character at the end of command, didn't work otherwise 
+		cmdstr[strlen(cmdstr)-1] = 0; // removing newline character at the end of command, doesn't work otherwise 
 	
 		if (strcmp(cmdstr, "exit") == 0) // if command is exit, exit
 			exit(0);
 
-		pid = fork(); //if command is somthing else, fork
+		pid = fork(); //if command is something else, fork
 	
 		if (pid) // if parent, wait for child process to complete
 			wait(0);
