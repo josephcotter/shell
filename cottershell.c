@@ -1,4 +1,4 @@
-//JOEY COTTER LINUX SHELL 2017
+//JOEY COTTER UNIX SHELL 2017
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
