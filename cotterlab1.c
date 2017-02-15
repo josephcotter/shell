@@ -1,5 +1,4 @@
-//JOEY COTTER LAB 1 PART 1 SHELL 
-//My shell is almost exactly like the one taught in class. It first prompts the user for a command. If the command is "exit", the shell program exits. Otherwise, the shell forks and waits while the child attempts to execv the command. If this fails, the child exits and the shell prompts the user again. Otherwise the shell waits for the child to die, then prompts the user again. 
+//JOEY COTTER SIMPLE SHELL 
 
 #include <stdlib.h>
 #include <stdio.h>
