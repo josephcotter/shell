@@ -13,11 +13,13 @@ int pid;
 void main()
 {
 	cmdstr = (char *)malloc(bufsize * sizeof(char));
+	
 	if( cmdstr == NULL)
 	{
 		printf("Buffer allocation failed");
 		exit(0);
 	}
+	
 	while (1)
 	{
 		printf("[JOEY'S SHELL]$: ");
